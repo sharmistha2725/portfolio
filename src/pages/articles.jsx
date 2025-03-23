@@ -21,48 +21,54 @@ const Articles = () => {
   const articlesData = [
     {
       id: 1,
-      title: "Understanding RAG Systems in Modern AI Applications",
-      summary: "Explore how Retrieval Augmented Generation is transforming AI applications and enabling more reliable, context-aware responses.",
-      image: "./rag-article.jpg",
-      date: "March 15, 2025",
-      readTime: "8 min read",
-      category: "AI",
-      views: 1248,
-      link: "/articles/understanding-rag"
+      title: "Introduction to S3",
+      summary: "Explore how AWS S3 functions and features document storage",
+      image: "./s3.png",
+      date: "April 16, 2024",
+      readTime: "3 min read",
+      category: "AWS",
+      link: "https://www.linkedin.com/pulse/introduction-amazon-s3-sharmistha-sivakumar-acidc"
     },
     {
       id: 2,
-      title: "The Future of React: What's Coming in 2025",
-      summary: "A deep dive into upcoming React features and how they will change the way we build web applications.",
-      image: "./react-future.jpg",
-      date: "February 28, 2025",
-      readTime: "12 min read",
-      category: "Web Development",
-      views: 2357,
-      link: "/articles/future-of-react"
+      title: "Static website hosting using S3",
+      summary: "Host your personal static website using AWS S3",
+      image: "./web.png",
+      date: "April 17, 2024",
+      readTime: "2 min read",
+      category: "Website Hosting",
+      link: "https://www.linkedin.com/pulse/static-website-hosting-using-s3-sharmistha-sivakumar-lfoac"
     },
     {
       id: 3,
-      title: "Building Ethical AI Systems: A Practical Guide",
-      summary: "Learn the key principles and practices for developing AI systems that are fair, transparent, and beneficial for all users.",
-      image: "./ethical-ai.jpg",
-      date: "January 10, 2025",
-      readTime: "15 min read",
-      category: "AI",
-      views: 3012,
-      link: "/articles/ethical-ai-guide"
+      title: "AWS IAM: A Comprehensive Guide to Identity and Access Management",
+      summary: "Learn the key principles and best practices of using IAM roles and users with AWS",
+      image: "./IAM.jpeg",
+      date: "April 19, 2024",
+      readTime: "3 min read",
+      category: "AWS",
+      link: "https://www.linkedin.com/pulse/demystifying-aws-iam-comprehensive-guide-identity-access-sivakumar-kjojc"
     },
     {
       id: 4,
-      title: "Blockchain in Healthcare: Beyond the Hype",
-      summary: "Examining real-world applications of blockchain technology in healthcare systems and patient data management.",
-      image: "./blockchain-health.jpg",
-      date: "December 5, 2024",
-      readTime: "10 min read",
-      category: "Blockchain",
-      views: 1879,
-      link: "/articles/blockchain-healthcare"
-    }
+      title: "AWS HealthImaging: The Future of Medical Image Management",
+      summary: "Learn about AWS Healthimaging services",
+      image: "./HI.jpeg",
+      date: "June 2, 2024",
+      readTime: "4 min read",
+      category: "ML",
+      link: "https://www.linkedin.com/pulse/aws-healthimaging-future-medical-image-management-sivakumar-wl4xc"
+    },
+    {
+        id: 5,
+        title: "AWS Well-Architected Framework",
+        summary: "The AWS Well-Architected Framework helps you understand trade-offs for decisions you make while building workloads on AWS",
+        image: "./waf.png",
+        date: "June 8, 2024",
+        readTime: "4 min read",
+        category: "AWS",
+        link: "https://www.linkedin.com/pulse/aws-well-architected-framework-sharmistha-sivakumar-x53dc"
+      }
   ];
 
   // Get unique categories for filter buttons
