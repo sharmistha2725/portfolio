@@ -7,11 +7,11 @@ const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -20,25 +20,25 @@ const Navbar = ({ theme, toggleTheme }) => {
         setScrolled(false);
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
   useEffect(() => {
     // Close menu when route changes
     setIsOpen(false);
   }, [location]);
-
+  
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <span className="logo-text">Sharmistha Sivakumar</span>
         </Link>
-
+        
         <div className="navbar-icons">
           <a href="https://www.linkedin.com/in/sharmistha-sivakumar/" target="_blank" rel="noopener noreferrer" className="navbar-social-icon">
             <FaLinkedin />
@@ -53,7 +53,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             {theme === 'light' ? <FaMoon /> : <FaSun />}
           </button>
         </div>
-
+        
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={`menu-burger ${isOpen ? 'open' : ''}`}>
             <span></span>
@@ -61,7 +61,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <span></span>
           </div>
         </div>
-
+        
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <Link to="/" className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>Home</Link>
@@ -74,6 +74,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           </li>
           <li className="nav-item">
             <Link to="/projects" className={location.pathname === '/projects' ? 'nav-link active' : 'nav-link'}>Projects</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/articles" className={location.pathname === '/articles' ? 'nav-link active' : 'nav-link'}>Articles</Link>
           </li>
           <li className="nav-item">
             <Link to="/certificates" className={location.pathname === '/certificates' ? 'nav-link active' : 'nav-link'}>Certificates</Link>

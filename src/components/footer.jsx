@@ -10,9 +10,9 @@ const Footer = () => {
       behavior: 'smooth'
     });
   };
-
+  
   const currentYear = new Date().getFullYear();
-
+  
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -30,6 +30,7 @@ const Footer = () => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/skills">Skills</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
+                <li><Link to="/articles">Articles</Link></li>
                 <li><Link to="/certificates">Certificates</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
@@ -55,7 +56,7 @@ const Footer = () => {
             <a href="https://github.com/sharmistha2725" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="mailto:sharmisthasivakumar" aria-label="Email">
+            <a href="mailto:sharmisthasivakumar@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
           </div>
