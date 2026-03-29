@@ -22,7 +22,8 @@ const Home = () => {
     });
 
     const createParticles = () => {
-      //const particles = [];
+      const particles = []; // ✅ FIXED
+
       const colors = ['#4A86E8', '#34A853', '#FBBC05', '#EA4335'];
 
       for (let i = 0; i < 50; i++) {
@@ -35,7 +36,10 @@ const Home = () => {
         particle.style.left = `${posX}px`;
         particle.style.top = `${posY}px`;
 
-        particleRef.current.appendChild(particle);
+        if (particleRef.current) {
+          particleRef.current.appendChild(particle);
+        }
+
         particles.push(particle);
       }
 
@@ -46,6 +50,7 @@ const Home = () => {
 
     return () => {
       typed.destroy();
+
       particles.forEach(p => {
         particleRef.current?.removeChild(p);
       });
