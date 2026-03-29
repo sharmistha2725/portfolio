@@ -22,7 +22,7 @@ const Home = () => {
     });
 
     const createParticles = () => {
-      const particles = [];
+      //const particles = [];
       const colors = ['#4A86E8', '#34A853', '#FBBC05', '#EA4335'];
 
       for (let i = 0; i < 50; i++) {
