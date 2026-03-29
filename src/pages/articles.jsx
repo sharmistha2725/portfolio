@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaCalendarAlt, FaTag, FaEye, FaBookmark, FaShareAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaEye, FaBookmark, FaShareAlt } from 'react-icons/fa';
 import './articles.css';
 
 const Articles = () => {
