@@ -4,7 +4,7 @@ import './projects.css';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [filter, setFilter] = useState('all');
+  const [filter] = useState('all');
 
   useEffect(() => {
     setIsVisible(true);
