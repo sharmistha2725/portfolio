@@ -215,17 +215,14 @@ const Contact = () => {
             <FaEnvelope className="info-icon" />
             <p>sharmisthasivakumar@gmail.com</p>
           </div>
-
           <div className="info-item">
             <FaPhone className="info-icon" />
             <p>+91 9498098457</p>
           </div>
-
           <div className="info-item">
             <FaMapMarkerAlt className="info-icon" />
             <p>Chennai, India</p>
           </div>
-
           <div className="social-links">
             <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon" />
@@ -235,7 +232,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
         <div className="contact-form-container">
           {isSubmitted ? (
             <div className="success-message">
@@ -244,7 +240,6 @@ const Contact = () => {
             </div>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit}>
-
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -256,7 +251,6 @@ const Contact = () => {
                   required
                 />
               </div>
-
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
@@ -268,7 +262,6 @@ const Contact = () => {
                   required
                 />
               </div>
-
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
                 <input
@@ -280,7 +273,6 @@ const Contact = () => {
                   required
                 />
               </div>
-
               <div className="form-group">
                 <label htmlFor="message">Message</label>
                 <textarea
