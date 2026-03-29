@@ -8,19 +8,29 @@ const Home = () => {
   const typedRef = useRef(null);
   const particleRef = useRef(null);
 
+  // useEffect(() => {
+  //   // Typing animation
+  //   const typed = new Typed(typedRef.current, {
+  //     strings: [
+  //       'AI/ML Engineer',
+  //       'Software Developer',
+  //       'MLOps Engineer'
+  //     ],
+  //     typeSpeed: 80,
+  //     backSpeed: 50,
+  //     backDelay: 1500,
+  //     loop: true
+  //   });
+
   useEffect(() => {
-    // Typing animation
-    const typed = new Typed(typedRef.current, {
-      strings: [
-        'AI/ML Engineer',
-        'Software Developer',
-        'MLOps Engineer'
-      ],
-      typeSpeed: 80,
-      backSpeed: 50,
-      backDelay: 1500,
-      loop: true
-    });
+  const currentRef = particleRef.current;
+
+  return () => {
+    if (currentRef) {
+      currentRef.destroy();
+    }
+  };
+}, []);
 
     // Particle animation
     const createParticles = () => {
