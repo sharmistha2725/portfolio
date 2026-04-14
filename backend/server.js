@@ -5,10 +5,15 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+
+// ✅ CORS (IMPORTANT)
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 
-// ✅ MongoDB connection (ONLY ONCE)
+// ✅ MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected ✅"))
   .catch(err => console.log("DB ERROR:", err));
@@ -31,19 +36,18 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// ✅ API route
-app.post("/contact", async (req, res) => {
+// ✅ FIXED ROUTE HERE 👇
+app.post("/api/contact", async (req, res) => {
   console.log("📩 Received:", req.body);
 
   try {
     const { name, email, subject, message } = req.body;
 
-    // ✅ Validation FIRST
     if (!name || !email || !message) {
       return res.status(400).json({ error: "All fields required" });
     }
 
-    // ✅ Save to DB
+    // ✅ Save to MongoDB
     const data = new Contact({ name, email, subject, message });
     await data.save();
     console.log("📦 Saved to DB");
@@ -64,7 +68,7 @@ app.post("/contact", async (req, res) => {
 
     console.log("📬 Email sent to you");
 
-    // ✅ Auto-reply to USER
+    // ✅ Auto reply
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
